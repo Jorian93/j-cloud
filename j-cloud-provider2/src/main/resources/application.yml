@@ -1,0 +1,21 @@
+# 应用端口
+server:
+  port: 7902
+spring:
+  application:
+    # 应用名称,应用名称可以重复的
+    name: provider-user
+
+# eureka 配置
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://jorian:123456@localhost:8761/eureka
+# 开启负载均衡
+#ribbon:
+#  eureka:
+#    enabled: true
+
+logging:
+  level:
+    root: INFO

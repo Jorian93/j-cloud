@@ -1,0 +1,17 @@
+spring:
+  security:
+    basic:
+      enabled: true
+    user:
+      name: jorian
+      password: 123456
+server:
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://jorian:123456@localhost:8761/eureka
+
