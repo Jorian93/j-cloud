@@ -7,6 +7,10 @@
     <file url="file://$PROJECT_DIR$/j-cloud-provider1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/j-cloud-provider2/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/j-cloud-server-eureka/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/j-cloud-server-eureka/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/j-cloud-zuul/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sssdfgsdfg/src/main/java" charset="UTF-8" />
   </component>
 </project>

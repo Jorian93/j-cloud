@@ -1,5 +1,6 @@
 package cn.jorian.framework;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.cloud.client.SpringCloudApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -10,7 +11,6 @@ import org.springframework.core.env.Environment;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
-import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @SpringCloudApplication
@@ -25,14 +25,14 @@ public class JCloudConsumerFeignHystrixApplication {
         String ip = InetAddress.getLocalHost().getHostAddress();
         String port = env.getProperty("server.port");
         String path = env.getProperty("server.servlet.context-path");
+        path = path != null ? path : "";
         log.info("\n----------------------------------------------------------\n\t" +
                 "Application  is running! Access URLs:\n\t" +
                 "Local: \t\thttp://localhost:" + port + path + "/\n\t" +
                 "External: \thttp://" + ip + ":" + port + path + "/\n\t" +
-                "swagger-ui: \t\thttp://" + ip + ":" + port + path + "/doc.html\n" +
-                "HystrixDashboard: \t\thttp://" + ip + ":" + port + path + "/hystrix\n" +
+                "swagger-ui: http://" + ip + ":" + port + path + "/doc.html\n" +
+                "HystrixDashboard: http://" + ip + ":" + port + path + "/hystrix\n" +
                 "----------------------------------------------------------");
-
     }
 
 }

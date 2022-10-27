@@ -2,19 +2,23 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="j-cloud-consumer-feign" />
-        <module name="j-cloud-consumer" />
         <module name="j-cloud-server-eureka" />
+        <module name="j-cloud-provider1" />
+        <module name="j-cloud-provider2" />
         <module name="j-cloud-zuul" />
         <module name="j-cloud-consumer-feign-hystrix" />
-        <module name="j-cloud-provider2" />
-        <module name="j-cloud-provider1" />
+        <module name="j-cloud-consumer" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="sssdfgsdfg" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
@@ -24,7 +28,8 @@
       <module name="j-cloud-provider1" options="-parameters" />
       <module name="j-cloud-provider2" options="-parameters" />
       <module name="j-cloud-server-eureka" options="-parameters" />
-      <module name="j-cloud-zuul" options="" />
+      <module name="j-cloud-zuul" options="-parameters" />
+      <module name="sssdfgsdfg" options="-parameters" />
     </option>
   </component>
 </project>

@@ -9,4 +9,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://jorian:123456@localhost:8761/eureka
-
+  instance:
+    instance-id: j-cloud-consumer-feign-hystrix #修改Eureka上的默认描述信息

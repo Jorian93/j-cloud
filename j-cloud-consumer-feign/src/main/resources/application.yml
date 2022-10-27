@@ -1,5 +1,7 @@
 server:
   port: 8002
+  servlet:
+    context-path:
 spring:
   application:
     name: j-cloud-consumer-feign
@@ -9,4 +11,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://jorian:123456@localhost:8761/eureka
+  instance:
+    instance-id: j-cloud-consumer-feign #修改Eureka上的默认描述信息
 

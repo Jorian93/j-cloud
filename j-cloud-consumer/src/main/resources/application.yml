@@ -1,5 +1,7 @@
 server:
   port: 8001
+  servlet:
+    context-path:
 spring:
   application:
     name: j-cloud-consumer
@@ -9,6 +11,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://jorian:123456@localhost:8761/eureka
+  instance:
+    instance-id: j-cloud-consumer #修改Eureka上的默认描述信息
 logging:
   level:
     root: INFO

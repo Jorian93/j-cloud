@@ -1,17 +1,21 @@
 # 应用端口
 server:
   port: 7901
+  servlet:
+    context-path:
 spring:
   application:
     # 应用名称
     name: provider-user
+
 
 # eureka 配置
 eureka:
   client:
     serviceUrl:
       defaultZone: http://jorian:123456@localhost:8761/eureka
-
+  instance:
+    instance-id: jcloud-provider1 #修改Eureka上的默认描述信息
 logging:
   level:
     root: INFO

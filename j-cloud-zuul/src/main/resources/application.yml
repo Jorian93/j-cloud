@@ -1,16 +1,29 @@
 server:
   port: 9000
+  servlet:
+    context-path:
 spring:
   application:
     name: gateway-zuul
+  cloud:
+    gateway:
+      routes:
+        - id: after_route
+          uri: https://example.org
+          predicates:
+            - name: Cookie
+              args:
+                name: mycookie
+                regexp: mycookievalue
 eureka:
   client:
     serviceUrl:
       defaultZone: http://jorian:123456@localhost:8761/eureka
-zuul:
-  ignoredServices: '*'
-  routes:
-    app-a:
-      path: /u/**
-      serviceId: provider-user
 
+zuul:
+  routes:
+    provider.serviceId: jcloud-provider1
+    provider.path: /**
+  ignored-services: jcloud-provider # 不能再使用该路径访问
+  # ignored-services: "*" # 隐藏全部的
+  prefix: /j-cloud #公共的访问前缀

@@ -1,6 +1,8 @@
 # 应用端口
 server:
   port: 7902
+  servlet:
+    context-path:
 spring:
   application:
     # 应用名称,应用名称可以重复的
@@ -11,6 +13,8 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://jorian:123456@localhost:8761/eureka
+  instance:
+    instance-id: jcloud-provider2 #修改Eureka上的默认描述信息
 # 开启负载均衡
 #ribbon:
 #  eureka:
