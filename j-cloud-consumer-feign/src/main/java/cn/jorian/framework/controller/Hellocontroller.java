@@ -29,7 +29,7 @@ public class Hellocontroller {
     @GetMapping("/haha")
     public String haha() {
         return feignClient.sayHaha();
-	}
+    }
 
 
 }
